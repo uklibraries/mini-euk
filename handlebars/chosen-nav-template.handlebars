@@ -1,0 +1,9 @@
+<div class="chosen-facet">
+<span class="nav-title">Filters</span><br>
+{{#each this}}
+<a class="close" href="#">&times;</a>
+<a href='#' class="selectedNav" 
+    data-filter="{{name}}:{{value}}"
+    title="{{facet_displayname name}}:{{value}}">{{facet_displayname name}}:{{value}}</a><br>
+{{/each}}
+</div>

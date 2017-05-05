@@ -1,0 +1,29 @@
+<div class="entry row">
+{{#if link}}
+<div class="span8">
+<b>{{number}}.</b>
+<a href="{{link}}" target="_blank">{{{title}}}</a>
+</div>
+<div class="span2">
+{{#if thumb}}
+<a href="{{link}}" target="_blank"><img src="{{thumb}}"/></a></dt>
+{{/if}}
+</div>
+<div class="span6">
+<dl>
+{{#if source}}
+    <dd class="span1">Collection:</dd>
+    <dt class="span4">{{source}}</dt>
+{{/if}}
+{{#if pubdate}}
+    <dd class="span1">Publication date:</dd>
+    <dt class="span4">{{pubdate}}</dt>
+{{/if}}
+{{#if format}}
+    <dd class="span1">Format:</dd>
+    <dt class="span4">{{format}}</dt>
+{{/if}}
+</dl>
+</div>
+{{/if}}
+</div>
