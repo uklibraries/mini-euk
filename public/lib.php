@@ -157,6 +157,7 @@ function remove_filter($query, $facet, $label) {
 
 function build_search_params($q, $fq, $offset) {
     global $facets;
+    global $hits_per_page;
     $pieces = array();
     $pieces[] = "rows=$hits_per_page";
     $pieces[] = 'wt=json';
