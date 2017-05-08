@@ -61,7 +61,7 @@ $hl_simple_post = '</em>';
 $hl_snippets = 3;
 
 $q = null;
-$fq = null;
+$fq = array();
 $offset = null;
 $raw_params = array();
 if (isset($_SERVER['QUERY_STRING'])) {
@@ -75,9 +75,6 @@ foreach ($raw_params as $raw_param) {
         $q = $value;
     }
     elseif ($key == 'fq[]') {
-        if (!isset($fq)) {
-            $fq = array();
-        }
         $fq[] = $value;
     }
     elseif ($key == 'offset') {
