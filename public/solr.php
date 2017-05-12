@@ -9,7 +9,7 @@ $results_html = null;
 $url = "$solr?" . build_search_params($q, $fq, $offset);
 $result = json_decode(file_get_contents($url), true);
 
-if ((isset($q) or isset($fq)) and isset($result['response']) and
+if ((isset($q) or count($fq) > 0) and isset($result['response']) and
     isset($result['response']['docs']) and
     count($result['response']['docs']) > 0) {
 
